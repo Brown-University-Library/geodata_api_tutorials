@@ -33,15 +33,16 @@ for i,v in enumerate(states): # idx number and value, get all counties * for eac
         data_url = f'{base_url}?get={cols}&for=county:*&in=state:{v}&key={api_key}'
         response=requests.get(data_url)
         popdata=response.json()
-        if i==0: # if we are on the first record, grab the header row / column names
-            for record in popdata:
-                county_data.append(record)
-            else: # otherwise just take the data, we don't need the header each time
-                for record in popdata[1:]:
-                    county_data.append(record)
     except Exception as e:
         print(e)
-        print('Stopped requesting at index',i,'value',v)
+        print('Problem at index',i,'value',v)
+    if i==0: # if we are on the first record, grab the header row / column names
+        for record in popdata:
+            county_data.append(record)
+    else: # otherwise just take the data, we don't need the header each time
+        for record in popdata[1:]:
+            county_data.append(record)
+
 
 for record in county_data:
     print(record)
