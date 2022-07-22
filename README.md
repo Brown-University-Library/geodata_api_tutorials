@@ -34,6 +34,6 @@ Click on the folders at the top of this page to view the scripts and sample outp
 
 * **census_api_loop**: variation of the former, where the API call is made in a loop with a try / exception block to retrieve county-level data for a list of states.
 
-* **nyt_archives_api**: [New York Times Archive API](https://developer.nytimes.com/docs/archive-product/1/overview), for retrieving metadata for news articles published in a given year and month. Working with particularly complex JSON that's several levels deep, converting it to a dictionary format, searching elements in these levels for particular terms, and using logic to keep records based on a match. The metadata includes article URLs, so a second step (not illustrated) could be scraping the text from these articles using the URLs in the metadata.
+* **nyt_archives_api**: [New York Times Archive API](https://developer.nytimes.com/docs/archive-product/1/overview), for retrieving metadata for news articles published in a given year and month. Working with particularly complex JSON that's several levels deep, converting it to a dictionary format, searching elements in these levels for particular terms, and using logic to keep records based on a match. The metadata includes article URLs, so a second step could be scraping the text from these articles using the URLs in the metadata. Web scraping is *not* covered in these examples - visit the [Web Scraping Toolkit](https://libguides.brown.edu/web-scrape) for suggestions.
 
 ## 
